@@ -1,3 +1,19 @@
+:root {
+    --container-width: 80%;
+    --container-width-mobile: 95%;
+    --dark-bg-color: #222;
+    --dark-text-color: #fff;
+    --light-bg-color: #fff;
+    --light-text-color: #000;
+    --navbar-bg-color: rgb(10, 156, 10);
+    --btn-bg-color: green;
+    --btn-text-color: white;
+    --btn-padding: 10px 20px;
+    --btn-border-radius: 5px;
+    --transition-duration: 0.5s;
+    --section-padding: 20px;
+}
+
 /* Global Styles */
 * {
     box-sizing: border-box;
@@ -5,39 +21,40 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     direction: rtl;
-    scroll-behavior: smooth;
 }
 
 /* Container Class */
 .container {
-    width: 80%;
+    width: var(--container-width);
     margin: auto;
 }
 
 @media (max-width: 768px) {
     .container {
-        width: 95%;
+        width: var(--container-width-mobile);
         margin: auto;
     }
 }
 
-
 /* Mode Classes */
 .dark-mode {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
 }
 
 .light-mode {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
 }
 
 /* Navbar Styles */
 nav {
-    background-color: rgb(10, 156, 10);
+    background-color: var(--navbar-bg-color);
 }
 
 .navbar {
@@ -67,12 +84,12 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--dark-text-color);
 }
 
 .toggle-mode {
     background-color: black;
-    color: #fff;
+    color: var(--dark-text-color);
 }
 
 /* Back to Top Button Styles */
@@ -80,15 +97,23 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: green;
-    color: white;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-text-color);
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: var(--btn-border-radius);
+    padding: var(--btn-padding);
     cursor: pointer;
     font-size: 16px;
     display: none;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity var(--transition-duration) ease-in-out;
+    -webkit-border-radius: var(--btn-border-radius);
+    -moz-border-radius: var(--btn-border-radius);
+    -ms-border-radius: var(--btn-border-radius);
+    -o-border-radius: var(--btn-border-radius);
+    -webkit-transition: opacity var(--transition-duration) ease-in-out;
+    -moz-transition: opacity var(--transition-duration) ease-in-out;
+    -ms-transition: opacity var(--transition-duration) ease-in-out;
+    -o-transition: opacity var(--transition-duration) ease-in-out;
 }
 
 .back-to-top.show {
@@ -103,6 +128,11 @@ a {
 }
 
 /* Section 1 and 2 Styles */
+.section-1 h1{
+    font-size: 35px;
+    padding: 15px 0px;
+    margin-bottom: 5px;
+}
 .section-1, .section-2 {
     display: flex;
     justify-content: space-between;
@@ -118,9 +148,9 @@ a {
 }
 
 .section-1 button, .section-2 button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+    padding: var(--btn-padding);
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     cursor: pointer;
 }
@@ -133,7 +163,7 @@ a {
 @media (max-width: 768px) {
     .section-1, .section-2 {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .section-1 div, .section-2 div {
@@ -150,8 +180,8 @@ a {
 
 .box-1, .box-2 {
     flex: 1;
-    padding: 20px;
-    color: white;
+    padding: var(--section-padding);
+    color: #fff;
 }
 
 .box-1 {
@@ -189,11 +219,11 @@ a {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 20px 0px;
+    padding: var(--section-padding) 0;
 }
 
 .card {
-    border: 2px solid green;
+    border: 2px solid var(--btn-bg-color);
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -212,11 +242,14 @@ a {
 }
 
 /* Section 5 Styles */
+.title-section-5{
+    text-align: center;
+}
 .section-5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0px;
+    padding: var(--section-padding) 0;
 }
 
 .left-section {
@@ -229,7 +262,7 @@ a {
 .left-section img {
     width: calc(50% - 10px);
     height: auto;
-    border: 2px solid green;
+    border: 2px solid var(--btn-bg-color);
 }
 
 .right-section {
@@ -265,7 +298,7 @@ a {
 .section-6 {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: var(--section-padding);
 }
 
 .address, .contact-us {
@@ -297,9 +330,9 @@ input, textarea {
 }
 
 button {
-    padding: 10px 20px;
+    padding: var(--btn-padding);
     background-color: #4CAF50;
-    color: white;
+    color: var(--light-text-color);
     border: none;
     border-radius: 4px;
     cursor: pointer;
