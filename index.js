@@ -4,13 +4,14 @@ const body = document.body;
 modeBtn.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     body.classList.toggle('light-mode');
+    body.classList.contains('dark-mode') ? modeBtn.textContent = 'light' : modeBtn.textContent = 'Dark'
 });
 
 
 const backToTopBtn = document.getElementById('backToTopBtn');
 
 window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if ( document.documentElement.scrollTop > 20) {
         backToTopBtn.style.display = "block";
     } else {
         backToTopBtn.style.display = "none";
@@ -18,6 +19,5 @@ window.onscroll = function() {
 };
 
 backToTopBtn.addEventListener('click', () => {
-    document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
