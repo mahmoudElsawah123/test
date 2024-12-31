@@ -16,6 +16,14 @@ body {
     margin: auto;
 }
 
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+
 /* Mode Classes */
 .dark-mode {
     background-color: #222;
