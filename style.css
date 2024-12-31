@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  direction: rtl;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+.light-mode {
+  background-color: #fff;
+  color: #000;
+}
+nav {
+  background-color: rgb(10, 156, 10);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  /* width: 80%;
+    margin: auto; */
+}
+
+.navbar img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.toggle-mode {
+  background-color: black;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .container,
+  ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* ----------------------------------------------------------------------------------- */
+.section-1, .section-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-1 div, .section-2 div {
+    flex: 1;
+}
+
+.section-1 p, .section-2 h1, .section-2 p {
+    margin-bottom: 10px;
+}
+
+.section-1 button, .section-2 button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.section-1 img, .section-2 img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .section-1, .section-2 {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-1 div, .section-2 div {
+        margin-bottom: 20px;
+    }
+
+    .section-1 img, .section-2 img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+/* ----------------------------------------------------------------------------------- */
+
+
+.section-3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-1, .box-2 {
+    flex: 1;
+    padding: 20px;
+    color: white;
+}
+
+.box-1 {
+    background-color: #4CAF50;
+}
+
+.box-2 {
+    background-color: #66BB6A;
+}
+
+.section-3 h2 {
+    margin-bottom: 10px;
+}
+ 
+.section-3 p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .section-3 {
+        flex-direction: column;
+    }
+
+    .box-1, .box-2 {
+        margin: 10px 0;
+    }
+}
+/* ---------------------------------------------------------- */
